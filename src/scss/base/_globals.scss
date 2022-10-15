@@ -1,0 +1,44 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: v.$mainFont;
+  font-size: 1.8rem;
+  background-color: v.$Cream;
+  height: 100vh;
+
+  @include m.desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.container {
+  width: min(95%, 120rem);
+  margin-inline: auto;
+  @include m.desktop {
+    width: min(30%, 120rem);
+  }
+}
+
+// Utilities
+.section {
+  margin-top: 2rem;
+}
+
+hr {
+  border: 1px solid v.$Cream;
+  margin-block: 2rem;
+}

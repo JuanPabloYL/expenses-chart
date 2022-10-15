@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="build/css/app.css" />
+
+    <title>Expenses chart component</title>
+  </head>
+  <body>
+    <section class="my-balance container">
+      <div class="my-balance__heading">
+        <p class="my-balance__title">My balance</p>
+        <p class="my-balance__amount"><span>&#36;</span>921.48</p>
+      </div>
+      <div class="my-balance__icon">
+        <img src="images/logo.svg" alt="icon balance" />
+      </div>
+    </section>
+
+    <main class="balance container section">
+      <h2 class="balance__heading">Spending - Last 7 days</h2>
+
+      <section class="balance__graphics">
+        <div class="balance__graphic-container">
+          <div
+            class="balance__graphic"
+            id="balance-1"
+            data-title="$52.52"
+          ></div>
+          <p class="balance__graphic-text">mon</p>
+        </div>
+        <!-- graphic -->
+
+        <div class="balance__graphic-container">
+          <div class="balance__graphic" id="balance-2"></div>
+          <p class="balance__graphic-text">tue</p>
+        </div>
+        <!-- graphic -->
+
+        <div class="balance__graphic-container">
+          <div class="balance__graphic" id="balance-3"></div>
+          <p class="balance__graphic-text">wed</p>
+        </div>
+        <!-- graphic -->
+
+        <div class="balance__graphic-container">
+          <div class="balance__graphic" id="balance-4"></div>
+          <p class="balance__graphic-text">thu</p>
+        </div>
+        <!-- graphic -->
+
+        <div class="balance__graphic-container">
+          <div class="balance__graphic" id="balance-5"></div>
+          <p class="balance__graphic-text">fri</p>
+        </div>
+        <!-- graphic -->
+
+        <div class="balance__graphic-container">
+          <div class="balance__graphic" id="balance-6"></div>
+          <p class="balance__graphic-text">sat</p>
+        </div>
+        <!-- graphic -->
+
+        <div class="balance__graphic-container">
+          <div class="balance__graphic" id="balance-7"></div>
+          <p class="balance__graphic-text">sun</p>
+        </div>
+        <!-- graphic -->
+      </section>
+
+      <hr />
+
+      <section class="summary">
+        <div class="summary__amount">
+          <p class="summary__total">Total this month</p>
+          <p class="summary__save"><span>&#36;</span>478.33</p>
+        </div>
+        <div class="summary__growth">
+          <p class="summary__percentage">
+            <span>&#43;2.4%</span> from last month
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
