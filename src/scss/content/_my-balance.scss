@@ -1,0 +1,29 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.my-balance {
+  margin-top: 8rem;
+  background-color: v.$SoftRed;
+  border-radius: 1rem;
+  padding: 2rem;
+  color: v.$VeryPaleOrange;
+
+  @include m.desktop {
+    margin-top: 0;
+  }
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+  }
+
+  &__amount {
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+}

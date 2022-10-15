@@ -1,0 +1,97 @@
+@use "base/variables" as v;
+@use "base/mixins" as m;
+
+.balance {
+  background-color: v.$VeryPaleOrange;
+  border-radius: 1rem;
+  padding: 2rem;
+
+  &__heading {
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+  }
+
+  &__graphics {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.2rem;
+    height: 15rem;
+  }
+
+  &__graphic {
+    border-radius: 0.3rem;
+    background-color: v.$SoftRed;
+    height: 10%;
+    position: relative;
+
+    &::before,
+    &::after {
+      --scale: 0;
+      --tooltip-color: #333;
+      --arrow-size: 1rem;
+
+      position: absolute;
+      top: -0.25rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(var(--translate-y, 0))
+        scale(var(--scale));
+      transition: 50ms transform;
+
+      transform-origin: bottom center;
+    }
+
+    &::before {
+      --translate-y: calc(-100% - var(--arrow-size));
+      content: attr(data-title);
+      font-size: 1.2rem;
+      color: #fff;
+      padding: 0.5rem;
+      border-radius: 0.3rem;
+      text-emphasis: center;
+      width: max-content;
+      max-width: 100%;
+      background-color: var(--tooltip-color);
+    }
+
+    &:hover::before,
+    &:hover::after {
+      --scale: 1;
+    }
+
+    &::after {
+      --translate-y: calc(-1 * var(--arrow-size));
+
+      content: "";
+      border: var(--arrow-size) solid transparent;
+      border-top-color: var(--tooltip-color);
+      transform-origin: top center;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 4rem;
+
+      @include m.desktop {
+        width: 5rem;
+      }
+    }
+
+    &-text {
+      text-align: center;
+      margin: 1rem 0 0 0;
+      color: v.$MediumBrown;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+#balance-2 {
+  height: 50%;
+}
+
+#balance-3 {
+  height: 100%;
+  background-color: v.$Cyan;
+}
