@@ -20,7 +20,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://expenses-compontent.netlify.app/)
+- Live Site URL: [live site](https://expenses-compontent.netlify.app/)
 
 ## My process
 
