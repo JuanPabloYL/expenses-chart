@@ -35,7 +35,7 @@ Users should be able to:
 
 ### What I learned
 
-I learn adding dynamic tooltips with JavaScript when you hover an element
+I learned adding dynamic tooltips with JavaScript when you hover an element
 
 ### Continued development
 
