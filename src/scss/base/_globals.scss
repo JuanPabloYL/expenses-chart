@@ -17,6 +17,7 @@ body {
   font-size: 1.8rem;
   background-color: v.$Cream;
   height: 100vh;
+  position: relative;
 
   @include m.desktop {
     display: flex;

@@ -19,16 +19,16 @@
   }
 
   &__graphic {
-    --color: hsl(10, 79%, 65%);
+    --color: v.$SoftRed;
     border-radius: 0.3rem;
-    background-color: var(--color);
+    background-color: v.$SoftRed;
     height: 10%;
     position: relative;
 
     &:hover,
     &:active {
       cursor: pointer;
-      background-color: lighten(var(--color), 5%);
+      background-color: lighten((v.$SoftRed), 5%);
     }
 
     &::before,

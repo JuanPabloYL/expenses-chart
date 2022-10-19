@@ -38,7 +38,6 @@ function showInfo(data) {
 
     arr.push(parseFloat(balanceGraphic.style.height));
   });
-  let root = document.documentElement;
   const max = Math.max(...arr);
   const elements = document.querySelectorAll(".balance__graphic");
   elements.forEach((element) => {
